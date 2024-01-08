@@ -2,8 +2,8 @@
 
 beautifulsoup4==4.12.2
 certifi==2020.6.20
-fastapi==0.108.0
 pymongo==4.0
+pymongo[srv] == 4.0
 PyPDF2==1.26.0
 python-dotenv==1.0.0
 python-telegram-bot==20.7
@@ -11,5 +11,3 @@ random-user-agent==1.0.1
 requests==2.26.0
 selenium==4.0.0
 webdriver-manager==3.5.2
-gunicorn == 21.2.0
-uvicorn == 0.25.0
