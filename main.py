@@ -408,4 +408,4 @@ if __name__ == '__main__':
 
 
     
-    application.run_webhook("0.0.0.0", port=80,url_path="https://telegram-notifications-bot.onrender.com", allowed_updates=Update.ALL_TYPES)
+    application.run_webhook("0.0.0.0", port=80,webhook_url="https://telegram-notifications-bot.onrender.com", allowed_updates=Update.ALL_TYPES)
