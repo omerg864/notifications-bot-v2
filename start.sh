@@ -1,1 +1,1 @@
-python main.py
+gunicorn main:app -k uvicorn.workers.UvicornWorker
