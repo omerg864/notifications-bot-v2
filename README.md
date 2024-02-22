@@ -7,9 +7,6 @@ This is a Telegram bot built with Python and Selenium that notifies the active u
 The following environment variables are required to run the bot:
 
 -   `COUPONS_URL`: the URL of the Udemy 100% off coupons page
--   `GOOGLE_CHROME_BIN`: the path to the Google Chrome binary
--   `MISHMAR_RAMLA_ADMIN`: the username for Mishmar Ramla access
--   `MISHMAR_RAMLA_ADMIN_PASS`: the password for Mishmar Ramla access
 -   `MONGODB_ACCESS`: the MongoDB access URL
 -   `NOTIFICATIONS_BOT_TOKEN`: the Telegram bot token
 -   `PORT`: the port for the server to listen on
@@ -35,13 +32,6 @@ The following commands are available to use with the bot:
 -   `/exitwaitcoupons`: send all the coupons that were meant to be sent while in hold mode
 -   `/chatid`: display the chat ID of the active user
 -   `/managercommands`: display the list of available manager commands
-
-The bot also has manager commands that can only be accessed with a password:
-
--   `/createorg`: creates a new schedule in Mishmar Ramla
--   `/echo`: sends a message to all active chats
--   `/getregistered`: display the list of all registered users
--   `/changepass`: change the password for the manager commands
 
 ## Conclusion
 

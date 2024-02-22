@@ -14,6 +14,8 @@ load_dotenv()
 
 TOKEN = os.getenv('TOKEN')
 COUPONS_URL = os.getenv('COUPONS_URL')
+WEBHOOK_URL = os.getenv('WEBHOOK_URL')
+PORT = int(os.getenv('PORT'))
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -329,8 +331,8 @@ def connect_to_db_coupons(urls, read):
     client = pymongo.MongoClient(os.environ.get("MONGODB_ACCESS"), tlsCAFile=ca)
     db = client.new_database
     if not read:
-        query = {"_id" : 1 }
-        db.coupons.replace_one(query ,{"url": urls[0], "url2": urls[1], "_id" : 1})
+        query = {"_id": 1}
+        db.coupons.replace_one(query, {"url": urls[0], "url2": urls[1], "_id": 1})
     else:
         settings = db.coupons.find_one({"_id": 1})
         urls2 = [settings["url"], settings["url2"]]
@@ -408,4 +410,4 @@ if __name__ == '__main__':
 
 
     
-    application.run_webhook("0.0.0.0", port=80,webhook_url="https://telegram-notifications-bot.onrender.com", allowed_updates=Update.ALL_TYPES)
+    application.run_webhook("0.0.0.0", port=PORT,webhook_url=WEBHOOK_URL, allowed_updates=Update.ALL_TYPES)
